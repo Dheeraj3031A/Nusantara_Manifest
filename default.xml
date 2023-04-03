@@ -8,9 +8,9 @@
            remote="aosp"
            sync-j="4" />
   
-  <superproject name="platform/superproject" remote="aosp" revision="android-security-12.0.0_r45" />
+  <superproject name="platform/superproject" remote="aosp" revision="android-12.0.0_r16" />
   <contactinfo bugurl="go/repo-bug" />
-  
+
   <project path="build/make" name="platform/build" groups="pdk" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -89,6 +89,7 @@
   <project path="device/google/crosshatch-sepolicy" name="device/google/crosshatch-sepolicy" groups="device,crosshatch,generic_fs" />
   <project path="device/google/cuttlefish" name="device/google/cuttlefish" groups="device,pdk" />
   <project path="device/google/cuttlefish_prebuilts" name="device/google/cuttlefish_prebuilts" groups="device,pdk" clone-depth="1" />
+  <project path="device/google/fuchsia" name="device/google/fuchsia" groups="device" />
   <project path="device/google/trout" name="device/google/trout" groups="device,trout,gull,pdk" />
   <project path="device/google/vrservices" name="device/google/vrservices" groups="pdk" />
   <project path="device/google_car" name="device/google_car" groups="pdk" />
@@ -937,6 +938,7 @@
   <project path="prebuilts/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" groups="pdk" clone-depth="1" />
   <project path="prebuilts/cmdline-tools" name="platform/prebuilts/cmdline-tools" groups="pdk-fs" clone-depth="1" />
   <project path="prebuilts/devtools" name="platform/prebuilts/devtools" groups="pdk-fs" clone-depth="1" />
+  <project path="prebuilts/fuchsia_sdk" name="platform/prebuilts/fuchsia_sdk" groups="pdk-fs" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" groups="pdk,darwin,arm" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" groups="pdk,darwin,arm" clone-depth="1" />
   <project path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" groups="pdk,darwin" clone-depth="1" />
@@ -1087,10 +1089,9 @@
   <project path="tools/tradefederation/prebuilts" name="platform/tools/tradefederation/prebuilts" groups="pdk,tradefed" />
   <project path="tools/treble" name="platform/tools/treble" groups="tools,pdk" />
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
-  
+
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
-  
-  
+
   <include name="snippets/remove.xml" />
   <include name="snippets/nusantara.xml" />
   <include name="snippets/lineage.xml" />
